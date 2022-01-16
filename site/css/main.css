@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Poppins:wght@600;800&display=swap');
+
+:root {
+    --background: #eee;
+    --text: #333;
+    --dc-background: #e2e7f7;
+    --dc: #7289DA;
+    --border: #ccc;
+    --title: #111;
+    --background-filter: contrast(0.2) brightness(1.7) saturate(1.7) grayscale(0.3);
+    --icon-filter: none;
+    --project-card-border: #000;
+}
+
+[data-theme="dark"] {
+    --background: #121212;
+    --text: #bbb;
+    --dc-background: #161b2b;
+    --dc: #445282;
+    --border: #222;
+    --title: #ddd;
+    --background-filter: contrast(0.5) brightness(0.35) saturate(1.7) grayscale(0.2) opacity(1);
+    --icon-filter: invert(1);
+    --project-card-border: #fff;
+}
+
+[data-theme="dark"] .github-icon {
+    filter: invert(1);
+}
+
+#map {
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    width: 50%;
+    background: var(--background);
+    border: 0px solid #e2e7f7;
+    margin: 1em 0;
+}
+
+body {
+    background: var(--background);
+    margin: 2rem;
+    transition: background-color 0.2s, color 0.2s, filter 0.2s, border 0.2s;
+
+}
+
+.center {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.widerCenter {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer {
+    margin: 4rem 0;
+}
+
+h1 {
+    font-family: "Poppins",sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    background: #3c709d;
+    background: linear-gradient(51deg,#3c709d,#22416c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0;
+    -webkit-flex: 1 1;
+    margin: 0 0 2rem;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--title);
+    font-weight: 800;
+}
+
+.background:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+p, ul {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--text);
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#legend {
+    float: left;
+    margin: 0;
+    text-align: left;
+    width: 40%;
+    color: #777;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+#map.animstart g {
+    -webkit-transform: translate(600px,0);
+    -webkit-transition: 1s -webkit-transform;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transform: translate(600px,0);
+    -moz-transition: 1s -moz-transform;
+    -moz-transition-timing-function: ease-out;
+}
+
+#map.animend g {
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+}
+
