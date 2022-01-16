@@ -1,1 +1,0 @@
-../../mapcolorizer.js
